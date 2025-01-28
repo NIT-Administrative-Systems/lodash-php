@@ -19,6 +19,6 @@ class UnionWithTest extends TestCase
         $objects = [['x' => 1, 'y' => 2], ['x' => 2, 'y' => 1]];
         $others = [['x' => 1, 'y' => 1], ['x' => 1, 'y' => 2]];
 
-        $this->assertSame([['x' => 1, 'y' => 2], ['x' => 2, 'y' => 1], ['x' => 1, 'y' => 1]], unionWith($objects, $others, '_::isEqual'));
+        $this->assertSame([['x' => 1, 'y' => 2], ['x' => 2, 'y' => 1], ['x' => 1, 'y' => 1]], unionWith($objects, $others, '_Lodash::isEqual'));
     }
 }

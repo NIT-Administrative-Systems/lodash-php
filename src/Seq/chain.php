@@ -16,11 +16,11 @@ namespace _;
  * chain sequences enabled. The result of such sequences must be unwrapped
  * with `->value()`.
  *
- * @category Seq
- *
  * @param mixed $value The value to wrap.
  *
- * @return \_ Returns the new `lodash` wrapper instance.
+ * @return \_Lodash Returns the new `lodash` wrapper instance.
+ * @category Seq
+ *
  * @example
  * <code>
  * $users = [
@@ -39,9 +39,9 @@ namespace _;
  * // => 'pebbles is 1'
  * </code>
  */
-function chain($value): \_
+function chain($value): \_Lodash
 {
-    /** @var \_ $result */
+    /** @var \_Lodash $result */
     $result = __($value);
     $result->__chain__ = true;
 

@@ -9,7 +9,7 @@ declare(strict_types=1);
  * @copyright  Copyright (c) 2017
  */
 
-final class _
+final class _Lodash
 {
     public $__chain__ = false;
 
@@ -82,20 +82,20 @@ final class _
     }
 }
 
-function lodash($value): _
+function lodash($value): _Lodash
 {
-    return new _($value);
+    return new _Lodash($value);
 }
 
 // We can't use "_" as a function name, since it collides with the "_" function in the gettext extension
 // Laravel uses a function __, so only register the alias if the function name is not in use
 if (!function_exists('__')) {
-    function __($value): _
+    function __($value): _Lodash
     {
-        return new _($value);
+        return new _Lodash($value);
     }
 }
 
 if (!defined('_')) {
-    define('_', _::class);
+    define('_', _Lodash::class);
 }

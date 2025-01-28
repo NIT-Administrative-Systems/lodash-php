@@ -17,6 +17,6 @@ class UnzipWithTest extends TestCase
     public function testUnzipWith()
     {
         $zipped = [[1, 10, 100], [2, 20, 200]];
-        $this->assertSame([3, 30, 300], unzipWith($zipped, '_::add'));
+        $this->assertSame([3, 30, 300], unzipWith($zipped, '_Lodash::add'));
     }
 }

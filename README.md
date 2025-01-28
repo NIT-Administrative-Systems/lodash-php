@@ -32,7 +32,7 @@ Lodash-PHP also comes with a global `_` class that can be used globally.
 ```php
 <?php
 
-_::each([1, 2, 3], function (int $item) {
+_Lodash::each([1, 2, 3], function (int $item) {
     var_dump($item);
 });
 ```
@@ -1637,13 +1637,14 @@ with two arguments: (arrVal, othVal).
 @return array the new duplicate free array.
 
 Example:
+
 ```php
 <?php
  use function _\uniqWith;
 
 $objects = [['x' => 1, 'y' => 2], ['x' => 2, 'y' => 1], ['x' => 1, 'y' => 2]]
 
-uniqWith($objects, '_::isEqual')
+uniqWith($objects, '_Lodash::isEqual')
 // => [['x' => 1, 'y' => 2], ['x' => 2, 'y' => 1]]
 
 ```
@@ -1701,6 +1702,7 @@ elements of each group: (...group).
 @return array the new array of regrouped elements.
 
 Example:
+
 ```php
 <?php
  use function _\unzipWith;
@@ -1708,7 +1710,7 @@ Example:
 $zipped = zip([1, 2], [10, 20], [100, 200])
 // => [[1, 10, 100], [2, 20, 200]]
 
-unzipWith(zipped, '_::add')
+unzipWith(zipped, '_Lodash::add')
 // => [3, 30, 300]
 
 ```
@@ -4516,6 +4518,7 @@ RegExp $options['interpolate'] = _::$templateSettings['interpolate'] The "interp
 @return callable Returns the compiled template function.
 
 Example:
+
 ```php
 <?php
  use function _\template;
@@ -4552,7 +4555,7 @@ $compiled([ 'users' => ['fred', 'barney'] ])
 // => '<li>fred</li><li>barney</li>'
 
 // Use custom template delimiters.
-\_::$templateSettings['interpolate'] = '{{([\s\S]+?)}}'
+\_Lodash::$templateSettings['interpolate'] = '{{([\s\S]+?)}}'
 $compiled = template('hello {{ user }}!')
 $compiled([ 'user' => 'mustache' ])
 // => 'hello mustache!'

@@ -17,6 +17,6 @@ class UniqWithTest extends TestCase
     public function testUniqWith()
     {
         $objects = [['x' => 1, 'y' => 2], ['x' => 2, 'y' => 1], ['x' => 1, 'y' => 2]];
-        $this->assertSame([['x' => 1, 'y' => 2], ['x' => 2, 'y' => 1]], uniqWith($objects, '_::isEqual'));
+        $this->assertSame([['x' => 1, 'y' => 2], ['x' => 2, 'y' => 1]], uniqWith($objects, '_Lodash::isEqual'));
     }
 }

@@ -26,8 +26,8 @@ class GetTest extends TestCase
         $this->assertSame($defaultValue, get($sampleArray, ["key1","key2","key3","key4"], $defaultValue), "Default To method 6 failed");
         $this->assertSame("", get($sampleArray, "key1.key2.key4", $defaultValue), "Default To method 8 failed");
 
-        $this->assertSame($sampleArray["key1"]["key2"], _::get($sampleArray, "key1.key2", $defaultValue), "Default To method 9 failed");
-        $this->assertSame($defaultValue, _::get($sampleArray, "key1.key3", $defaultValue), "Default To method 10 failed");
+        $this->assertSame($sampleArray["key1"]["key2"], _Lodash::get($sampleArray, "key1.key2", $defaultValue), "Default To method 9 failed");
+        $this->assertSame($defaultValue, _Lodash::get($sampleArray, "key1.key3", $defaultValue), "Default To method 10 failed");
     }
 
     public function testDefaultToObject()
@@ -43,7 +43,7 @@ class GetTest extends TestCase
         $this->assertSame($defaultValue, get($sampleArray, ["key1","key2","key3","key4"], $defaultValue), "Default To method object 6 failed");
         $this->assertSame("", get($sampleArray, "key1.key2.key4", $defaultValue), "Default To method object 8 failed");
 
-        $this->assertSame($sampleArray->key1->key2, _::get($sampleArray, "key1.key2", $defaultValue), "Default To method object 9 failed");
-        $this->assertSame($defaultValue, _::get($sampleArray, "key1.key3", $defaultValue), "Default To method 10 failed");
+        $this->assertSame($sampleArray->key1->key2, _Lodash::get($sampleArray, "key1.key2", $defaultValue), "Default To method object 9 failed");
+        $this->assertSame($defaultValue, _Lodash::get($sampleArray, "key1.key3", $defaultValue), "Default To method 10 failed");
     }
 }

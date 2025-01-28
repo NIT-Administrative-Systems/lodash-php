@@ -34,10 +34,10 @@ class TemplateTest extends TestCase
         $compiled = template('<% all($users, function($user) { %><li><%- user %></li><% })%>', ['imports' => ['_\each' => 'all']]);
         $this->assertSame('<li>fred</li><li>barney</li>', $compiled(['users' => ['fred', 'barney']]));
 
-        $compiled = template('<% underscore::each($users, function($user) { %><li><%- user %></li><% })%>', ['imports' => ['_' => 'underscore']]);
+        $compiled = template('<% underscore::each($users, function($user) { %><li><%- user %></li><% })%>', ['imports' => ['\_Lodash' => 'underscore']]);
         $this->assertSame('<li>fred</li><li>barney</li>', $compiled(['users' => ['fred', 'barney']]));
 
-        \_::$templateSettings['interpolate'] = '{{([\s\S]+?)}}';
+        \_Lodash::$templateSettings['interpolate'] = '{{([\s\S]+?)}}';
 
         $compiled = template('hello {{ user }}!');
         $this->assertSame('hello mustache!', $compiled(['user' => 'mustache']));

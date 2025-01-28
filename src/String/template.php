@@ -95,13 +95,13 @@ const stringEscapes = [
  */
 function template(string $string, array $options = []): callable
 {
-    $options = \array_merge_recursive(\_::$templateSettings, $options);
+    $options = \array_merge_recursive(\_Lodash::$templateSettings, $options);
 
     $interpolate = $options['interpolate'] ?? reNoMatch;
 
     $reDelimiters = \implode('|', [
         ($options['escape'] ?? reNoMatch),
-        ($interpolate === \_::reInterpolate ? reEsTemplate : reNoMatch),
+        ($interpolate === \_Lodash::reInterpolate ? reEsTemplate : reNoMatch),
         $interpolate,
         ($options['evaluate'] ?? reNoMatch),
     ]);
