@@ -52,7 +52,7 @@ namespace _;
  * // => ['a', 'b']
  * </code>
  */
-function memoize(callable $func, callable $resolver = null)
+function memoize(callable $func, ?callable $resolver = null)
 {
     $memoized = new class($func, $resolver ?? null) {
 

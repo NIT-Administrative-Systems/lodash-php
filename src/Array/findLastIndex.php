@@ -21,7 +21,7 @@ use function _\internal\baseIteratee;
  *
  * @param array $array     The array to inspect.
  * @param mixed $predicate The function invoked per iteration.
- * @param int   $fromIndex The index to search from.
+ * @param ?int  $fromIndex The index to search from.
  *
  * @return int the index of the found element, else `-1`.
  * @example
@@ -36,7 +36,7 @@ use function _\internal\baseIteratee;
  * // => 2
  * </code>
  */
-function findLastIndex(array $array, $predicate, int $fromIndex = null): int
+function findLastIndex(array $array, $predicate, ?int $fromIndex = null): int
 {
     $length = \count($array);
     $index = $fromIndex ?? $length - 1;

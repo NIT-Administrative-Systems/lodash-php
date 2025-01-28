@@ -22,7 +22,7 @@ namespace _;
  * @category String
  *
  * @param int|float|string $string The string to convert.
- * @param int              $radix  The radix to interpret `string` by.
+ * @param ?int             $radix  The radix to interpret `string` by.
  *
  * @return int Returns the converted integer.
  *
@@ -32,7 +32,7 @@ namespace _;
  * // => 8
  * </code>
  */
-function parseInt($string, int $radix = null): int
+function parseInt(int|float|string $string, ?int $radix = null): int
 {
     if (null === $radix) {
         $radix = 10;

@@ -11,7 +11,7 @@ namespace _\internal;
  * @copyright  Copyright (c) 2018
  */
 
-function baseUniq(array $array, callable $iteratee = null, callable $comparator = null)
+function baseUniq(array $array, ?callable $iteratee = null, ?callable $comparator = null)
 {
     $index = -1;
     $includes = '\_\internal\arrayIncludes';

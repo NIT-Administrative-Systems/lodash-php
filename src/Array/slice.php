@@ -18,11 +18,11 @@ namespace _;
  *
  * @param array  $array The array to slice.
  * @param    int $start The start position.
- * @param    int $end   The end position.
+ * @param   ?int $end   The end position.
  *
  * @return array the slice of `array`.
  */
-function slice(array $array, int $start, int $end = null): array
+function slice(array $array, int $start, ?int $end = null): array
 {
     return \array_slice($array, $start, $end);
 }

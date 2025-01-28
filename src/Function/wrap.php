@@ -18,8 +18,8 @@ namespace _;
  *
  * @category Function
  *
- * @param mixed    $value   The value to wrap.
- * @param callable $wrapper The wrapper function.
+ * @param mixed     $value   The value to wrap.
+ * @param ?callable $wrapper The wrapper function.
  *
  * @return callable the new function.
  * @example
@@ -32,7 +32,7 @@ namespace _;
  * // => '<p>fred, barney, &amp; pebbles</p>'
  * </code>
  */
-function wrap($value, callable $wrapper = null): callable
+function wrap($value, ?callable $wrapper = null): callable
 {
     return partial($wrapper ?? '\_\identity', $value);
 }

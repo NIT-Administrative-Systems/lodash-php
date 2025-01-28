@@ -11,7 +11,7 @@ declare(strict_types=1);
 
 namespace _\internal;
 
-function baseSet($object, $path, $value, callable $customizer = null)
+function baseSet($object, $path, $value, ?callable $customizer = null)
 {
     if (!\is_object($object)) {
         return $object;

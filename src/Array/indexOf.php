@@ -21,7 +21,7 @@ namespace _;
  *
  * @param array $array     The array to inspect.
  * @param mixed $value     The value to search for.
- * @param int   $fromIndex The index to search from.
+ * @param ?int  $fromIndex The index to search from.
  *
  * @return int the index of the matched value, else `-1`.
  * @example
@@ -34,7 +34,7 @@ namespace _;
  * // => 3
  * </code>
  */
-function indexOf(array $array, $value, int $fromIndex = null): int
+function indexOf(array $array, $value, ?int $fromIndex = null): int
 {
     $inc = true;
     $index = 0;

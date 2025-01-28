@@ -20,7 +20,7 @@ use function _\internal\baseIteratee;
  *
  * @param array    $array     The array to inspect.
  * @param callable $predicate The function invoked per iteration.
- * @param int      $fromIndex The index to search from.
+ * @param ?int     $fromIndex The index to search from.
  *
  * @return int the index of the found element, else `-1`.
  * @example
@@ -47,7 +47,7 @@ use function _\internal\baseIteratee;
  * // => 2
  * </code>
  */
-function findIndex(array $array, $predicate, int $fromIndex = null): int
+function findIndex(array $array, $predicate, ?int $fromIndex = null): int
 {
     $length = \count($array);
     if (!$length) {

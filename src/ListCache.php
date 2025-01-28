@@ -22,7 +22,7 @@ final class ListCache implements CacheInterface
 {
     use CacheDataTrait;
 
-    public function __construct(iterable $entries = null)
+    public function __construct(?iterable $entries = null)
     {
         $this->clear();
 

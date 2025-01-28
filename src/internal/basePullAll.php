@@ -11,7 +11,7 @@ declare(strict_types=1);
 
 namespace _\internal;
 
-function basePullAll(&$array, array $values, ?callable $iteratee, callable $comparator = null)
+function basePullAll(&$array, array $values, ?callable $iteratee, ?callable $comparator = null)
 {
     $indexOf = $comparator ? '_\\internal\\baseIndexOfWith' : '_\\indexOf';
 

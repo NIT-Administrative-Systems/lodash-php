@@ -18,7 +18,7 @@ namespace _;
  *
  * @param string $string   The string to inspect.
  * @param string $target   The string to search for.
- * @param int    $position The position to search from.
+ * @param ?int   $position The position to search from.
  *
  * @return boolean Returns `true` if `string` starts with `target`, else `false`.
  * @example
@@ -33,7 +33,7 @@ namespace _;
  * // => true
  * </code>
  */
-function startsWith(string $string, string $target, int $position = null): bool
+function startsWith(string $string, string $target, ?int $position = null): bool
 {
     $length = \strlen($string);
     $position = null === $position ? 0 : +$position;

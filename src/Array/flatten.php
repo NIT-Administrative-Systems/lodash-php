@@ -18,7 +18,7 @@ use function _\internal\baseFlatten;
  *
  * @category Array
  *
- * @param array $array The array to flatten.
+ * @param ?array $array The array to flatten.
  *
  * @return array the new flattened array.
  * @example
@@ -27,7 +27,7 @@ use function _\internal\baseFlatten;
  * // => [1, 2, [3, [4]], 5]
  * </code>
  */
-function flatten(array $array = null): array
+function flatten(?array $array = null): array
 {
     return baseFlatten($array, 1);
 }
