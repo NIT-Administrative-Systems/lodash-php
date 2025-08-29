@@ -6,10 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+- Support for PHP 8.2 has been dropped.
+- Added support for `sebastian/comparator` ^7
+
 ## [v2.0.0] - 2025-01-28
 ### Changed
 - Support for PHP 8.4 added, and PHP 8.1 dropped.
-- Fixups for PHP 8.4 implicit nullable type declarations have been made. 
+- Fixups for PHP 8.4 implicit nullable type declarations have been made.
   - This is a breaking change if you were extending the `ListCache` or `MapCache` classes and overriding their constructors.
   - All other fixups impact functions and should not have an impact.
 - The `_` base class has been renamed `_Lodash`, as `_` as a class name has been deprecated.
