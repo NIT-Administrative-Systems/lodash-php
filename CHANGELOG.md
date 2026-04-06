@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v4.0.0] - 2026-04-06
+### Removed
+- **Breaking:** Removed the global `__()` function alias. It conflicted with Laravel's `__()` (trans) helper due to autoloader ordering. Use `lodash()` or `new _Lodash()` for chaining instead.
+### Fixed
+- Fixed `dropWhile` predicate using wrong array value after shifting elements.
+- Fixed `split` when `$limit` is `0` (was treating it as no limit).
+### Changed
+- Replaced `rand()` with `random_int()` for cryptographically secure randomness.
+- Replaced `is_array() || instanceof Traversable` with `is_iterable()` in `baseMatches`.
+- Modernized null coalesce usage in `castSlice`.
+
 ## [v3.0.0] - 2025-08-29
 ### Changed
 - Support for PHP 8.2 has been dropped.

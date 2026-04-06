@@ -12,7 +12,7 @@ class LodashTest extends TestCase
             ['user' => 'pebbles', 'age' => 1],
         ];
 
-        $youngest = __($users)
+        $youngest = lodash($users)
             ->sortBy('age')
             ->map(function ($o) {
                 return $o['user'] . ' is ' . $o['age'];
