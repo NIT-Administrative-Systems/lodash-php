@@ -42,7 +42,7 @@ namespace _;
 function chain($value): \_Lodash
 {
     /** @var \_Lodash $result */
-    $result = __($value);
+    $result = lodash($value);
     $result->__chain__ = true;
 
     return $result;

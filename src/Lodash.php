@@ -87,14 +87,8 @@ function lodash($value): _Lodash
     return new _Lodash($value);
 }
 
-// We can't use "_" as a function name, since it collides with the "_" function in the gettext extension
-// Laravel uses a function __, so only register the alias if the function name is not in use
-if (!function_exists('__')) {
-    function __($value): _Lodash
-    {
-        return new _Lodash($value);
-    }
-}
+// The __() alias has been removed. It conflicted with Laravel's __() (trans) helper
+// and other frameworks. Use lodash() or new _Lodash() for chaining instead.
 
 if (!defined('_')) {
     define('_', _Lodash::class);
