@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v4.0.1] - 2026-08-25
+### Changed
+- Added support for `sebastian/comparator` ^8 and `symfony/property-access` ^6, ^7, and ^8.
+
 ## [v4.0.0] - 2026-04-06
 ### Removed
 - **Breaking:** Removed the global `__()` function alias. It conflicted with Laravel's `__()` (trans) helper due to autoloader ordering. Use `lodash()` or `new _Lodash()` for chaining instead.
